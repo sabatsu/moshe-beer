@@ -8,6 +8,7 @@ end
 gem 'activeadmin'
 gem 'devise'
 gem 'tinymce-rails'
+gem 'video_player'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

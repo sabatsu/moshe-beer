@@ -1,35 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>פרופסור משה בר</title>
-    <meta property="og:title" content='פרופסור משה בר' /> 
-    <meta property="og:description" content='משה בר נולד בתרפ"ד (1924), גדל בברטיסלבה, היא פרשבורג, בירת סלובקיה, ונפטר בירושלים בתשס"ג (סוף 2002). בשנת 1941 עלה לארץ ישראל, כניצול שואה יחיד ממשפחתו הקרובה.' />   
-    <meta property="og:url" content="moshe-beer.herokuapp.com" />
-    <meta property="og:site_name" content='פרופסור משה בר' />
-    <meta property="og:type" content="website" />
-    	
-	<% og_image = "#{@s3}/og_image.jpg" %>
-    <meta property="og:image" content="<%= og_image %>" />
+<!DOCTYPE HTML>
+<html dir="rtl">
+	<head>
+		<%= render 'layouts/meta_tags' %>		
+		<%= csrf_meta_tags %>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<%= yield %>
+		<!-- Scripts -->
+		<script src="assets/jquery.min.js"></script>
+		<script src="assets/jquery.scrolly.min.js"></script>
+		<script src="assets/jquery.poptrox.min.js"></script>
+		<script src="assets/skel.min.js"></script>
+		<script src="assets/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/main.js"></script>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="60x60" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="72x72" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="76x76" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="114x114" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="120x120" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="144x144" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="152x152" href="<%= og_image %>">
-    <link rel="apple-touch-icon" sizes="180x180" href="<%= og_image %>">
-    <link rel="icon" type="image/png" sizes="192x192"  href="<%= og_image %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= og_image %>">
-    <link rel="icon" type="image/png" sizes="96x96" href="<%= og_image %>">        
-    <%= csrf_meta_tags %>
-
-    <%# stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%# javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+	</body>
 </html>

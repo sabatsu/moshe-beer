@@ -52,10 +52,11 @@ ActiveRecord::Schema.define(version: 20171006064550) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string   "type"
+    t.string   "page_type"
     t.string   "name"
     t.string   "title"
     t.string   "slug"
+    t.string   "video"
     t.text     "body"
     t.integer  "gallery_id"
     t.datetime "created_at", null: false

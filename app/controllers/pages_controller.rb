@@ -75,6 +75,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:type, :name, :title, :slug, :body, :gallery_id)
+      params.require(:page).permit(:page_type, :name, :title, :slug, :body, :gallery_id)
     end
 end
